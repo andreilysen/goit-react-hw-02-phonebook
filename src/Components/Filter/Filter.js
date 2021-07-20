@@ -1,11 +1,18 @@
 import React from "react";
 import PropTypes from "prop-types";
+import styles from "../Form/Form.module.css";
 
 const Filter = ({ value, changeFilter }) => {
   return (
     <>
       <p>Find contacts by name</p>
-      <input type="text" name="filter" value={value} onChange={changeFilter} />
+      <input
+        className={styles.input}
+        type="text"
+        name="filter"
+        value={value}
+        onChange={changeFilter}
+      />
     </>
   );
 };

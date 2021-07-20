@@ -30,6 +30,7 @@ class Form extends Component {
         <label className={styles.item}>
           <p>name</p>
           <input
+            className={styles.input}
             type="text"
             name="name"
             value={this.state.name}
@@ -40,6 +41,7 @@ class Form extends Component {
           />
           <p>Number</p>
           <input
+            className={styles.input}
             type="tel"
             name="number"
             value={this.state.number}

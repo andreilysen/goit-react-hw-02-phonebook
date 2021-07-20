@@ -1,11 +1,9 @@
 import React, { Component } from "react";
 import { v4 as uuidv4 } from "uuid";
 
-import Form from "./Components/Form";
-import Filter from "./Components/Filter";
-import ContactsList from "./Components/ContactsList";
-
-import "./App.css";
+import Form from "../Form";
+import Filter from "../Filter";
+import ContactsList from "../ContactsList";
 
 class App extends Component {
   state = {
@@ -56,15 +54,11 @@ class App extends Component {
         <Form onAddContacts={this.AddContact} />
 
         <h2>Contacts</h2>
-        {this.state.contacts.length > 1 && (
-          <Filter value={this.state.filter} changeFilter={this.ChangeFilter} />
-        )}
-        <ul>
-          <ContactsList
-            contacts={filterContact}
-            onRemoveContact={this.removeContact}
-          />
-        </ul>
+        <Filter value={this.state.filter} changeFilter={this.ChangeFilter} />
+        <ContactsList
+          contacts={filterContact}
+          onRemoveContact={this.removeContact}
+        />
       </>
     );
   }
