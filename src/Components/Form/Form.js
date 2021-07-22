@@ -9,6 +9,10 @@ class Form extends Component {
     number: "",
   };
 
+  static propTypes = {
+    onAddContacts: PropTypes.func.isRequired,
+  };
+
   handleChangeInput = (e) => {
     this.setState({ [e.target.name]: e.target.value });
   };
@@ -58,9 +62,5 @@ class Form extends Component {
     );
   }
 }
-
-Form.propTypes = {
-  onAddContacts: PropTypes.func.isRequired,
-};
 
 export default Form;
